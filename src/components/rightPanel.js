@@ -15,7 +15,7 @@ const RightPanel = (props) => {
     return(
     <Grid id='GridRight'>
         <Grid>
-            <img alt="Your Cart" src="/shopping-cart.png" className="d-inline-block align-top" />
+            <img alt="Your Cart" src="/sj.png" className="d-inline-block align-top" />
             <CardHeader title='Your Cart' />
         </Grid>
         <Grid item>
