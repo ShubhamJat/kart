@@ -32,7 +32,7 @@ import LeftPanel from './leftPanel';
         }
        else {
 //console.log("else");
-            var x= cart;
+            var x=[ ...cart];
             x.push(a);
            //cart.push(a);
             setCart(x);
@@ -58,7 +58,7 @@ import LeftPanel from './leftPanel';
         }
        else{
            
-       }
+       } 
       
     }
 
@@ -66,8 +66,8 @@ import LeftPanel from './leftPanel';
 
         if (newCart !== undefined && newCart !== null && newCart !== []) {
             setSubTotal(0);
-            console.log(newCart);
-            console.log(tempCoupon);
+        //    console.log(newCart);
+         //   console.log(tempCoupon);
             var sumt =0;
             for(var i=0;i<newCart.length;i++){
                 sumt=sumt + parseInt(newCart[i].totalPrice) * parseInt(newCart[i].quantity);
@@ -78,7 +78,7 @@ import LeftPanel from './leftPanel';
         }
     }
 
-    const handleCouponChange = event => {
+     const handleCouponChange = event => {
         setCoupon(event.target.value);
         calcSubTotal(cart, event.target.value);
     };
@@ -87,9 +87,9 @@ import LeftPanel from './leftPanel';
         <div>
             <Grid className='GridRoot'>
                 <LeftPanel items={items} addItem={addItem} removeItem={removeItem}/>
-                <Divider orientation="vertical" />
-                <RightPanel cart={cart} coupon={coupon}
-                    handleCouponChange={handleCouponChange} subTotal={subTotal} />
+               <Divider orientation="vertical" />
+                 <RightPanel cart={cart} coupon={coupon}
+                    handleCouponChange={handleCouponChange} subTotal={subTotal} /> 
             </Grid>
         </div>
     );
